@@ -1,3 +1,6 @@
+import 'package:componentes_5b/screens/first_screen.dart';
+import 'package:componentes_5b/screens/second_screen.dart';
+import 'package:componentes_5b/screens/third_screen.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatefulWidget {
@@ -31,6 +34,33 @@ class _StartScreenState extends State<StartScreen> {
             label: 'Ventana 3',
           ),
         ],
+        onTap: (index) {
+          if ( index == 0 ) {
+            setState(() {
+              _selectedIndex = index;
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FirstScreen()),
+              );
+            });
+          } else if ( index == 1 ) {
+            setState(() {
+              _selectedIndex = index;
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondScreen()),
+              );
+            });
+          } else if( index == 2) {
+            setState(() {
+              _selectedIndex = index;
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ThirdScreen()),
+              );
+            });
+          }
+        },
       ),
     );
   }

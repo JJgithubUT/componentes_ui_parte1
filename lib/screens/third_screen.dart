@@ -5,6 +5,16 @@ class ThirdScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Tercera ventana'));
+    return Scaffold(
+      appBar: AppBar(title: Text('Tercera Ventana'),),
+      body: Center(
+        child: Column(
+          children: [
+            Text('Una imagen'),
+            Image.asset('assets/img/img3.png'),
+          ],
+        ),
+      ),
+    );
   }
 }
